@@ -5,12 +5,13 @@ import { describeImagePrompt } from "@/ai/prompts";
 import TagCloud from "@/components/TagCloud";
 import FastImage from "@/components/FastImage";
 
-//An example of using the tag cloud and fast image component to generate a timelapse of images
+//An example of using the tag cloud and fast image component to generate a timeline of images depicting changes from 2020 to 2070
 
 export default function TimelapsePage() {
   const [keywords, setKeywords] = useState<string>("Selected Keywords...");
-  const [year, setYear] = useState<number>(2024);
+  const [year, setYear] = useState<number>(2020); // Start year changed to 2020
   const [animateImages, setAnimateImages] = useState<boolean>(false);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -21,19 +22,19 @@ export default function TimelapsePage() {
             }`}
             onClick={() => setAnimateImages(!animateImages)}
           >
-            {animateImages ? "⏹" : "▶"}
+            {animateImages ? "⏹ Stop Animation" : "▶ Start Animation"}
           </button>
-          <TagCloud
-            prompt="A cityscape"
-            totalTags={20}
-            handleSelect={(tags) => setKeywords(tags.join(", "))}
-          />
+
           <FastImage
-            prompt={`A cityscape in the year ${year.toString()}, ${keywords}`}
+            prompt={`Create a series of images depicting the progression of a timeline from 2019 to 2044, illustrating the transformative global impact of the beef industry coming to a halt due to its significant contribution to climate change and carbon emissions. The first image should start in 2019, showing a world heavily reliant on beef with visible signs of environmental degradation such as deforestation and high carbon emissions. As the timeline advances, depict the transition towards sustainable practices with the emergence of expansive fish farms in the oceans of Norway by 2025, which become a major global source of protein. Illustrate the revitalization of marine ecosystems and cleaner air resulting from reduced beef production. By 2035, show how cities have adapted to new dietary and economic realities, with markets and restaurants prominently featuring fish-based dishes. Conclude the series in 2044 with a vision of a sustainable future where fish farming is fully integrated into society, helping restore terrestrial ecosystems previously dedicated to cattle grazing. This visual narrative should effectively showcase a world undergoing significant ecological and societal changes due to the shift from beef to fish protein. ${year}, ${keywords}`}
             systemPrompt={describeImagePrompt}
             imageSize="landscape_16_9"
             animate={animateImages ? 5000 : 0}
-            onChange={(url) => setYear((year) => year + 5)}
+            onChange={() => {
+              const nextYear = year + 5;
+              if (nextYear > 2070) setYear(2070); // Cap the year at 2070
+              else setYear(nextYear);
+            }}
           />
         </div>
       </div>
