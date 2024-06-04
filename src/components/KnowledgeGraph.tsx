@@ -30,7 +30,7 @@ export default function KnowledgeGraph({
   const [nodes, setNodes] = useState<GNode[]>(graph.nodes);
   const [edges, setEdges] = useState<Edge[]>(graph.edges);
   const [concept, setConcept] = useState<string>(
-    "Design and engineering considerations for an offshore salmon farm"
+    "Design and engineering considerations for an airship ferrying system that replaces the transport of cargo through lake gutan by ships with airships to let the lake reguvinate"
   );
   const [generating, setGenerating] = useState<boolean>(false);
   const [selectedNode, setSelectedNode] = useState<GNode | null>(null);
