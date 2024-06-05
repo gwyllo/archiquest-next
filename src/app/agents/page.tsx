@@ -10,9 +10,45 @@ export const dynamic = "force-dynamic";
 
 //This is new - just provide a high level goal and groq will figure out how to make agents
 const agentGoal =
-  "Build an offshore aquaculture farm to supply the worlds protein demands by 2050";
+  "Build an airship cargo ferrying system to have a stake in global transport by 2050";
 //set your agents here. If you leave this empty then Groq creates some for you based on your graph and the goal above.
-const initAgents: any = [];
+const initAgents = [
+  {
+    name: "CEO of Airship Company",
+    goal: "responsible for the efficency of the airship ferry system",
+    plan: "",
+    currentTask: "",
+    resourcesRequired: "",
+  },
+  {
+    name: "Airship protestor public figure",
+    goal: "your parents died in the hindeburg disaster. your goal is to spread as much negativity around the use of blimps being too unsafe.",
+    plan: "",
+    currentTask: "",
+    resourcesRequired: "",
+  },
+  {
+    name: "environmental consultant",
+    goal: "market demand for Airship use as it is effective in reducing environmental issues to lake gutan compared to cargo shipping.",
+    plan: "",
+    currentTask: "",
+    resourcesRequired: "",
+  },
+  {
+    name: "Chief of Budgetting",
+    goal: "reduce the operation cost of the project through mitigation strategies.",
+    plan: "",
+    currentTask: "",
+    resourcesRequired: "",
+  },
+  {
+  name: "Journalist",
+    goal: "report to the public on the reality of the project, spreading propaganda",
+    plan: "",
+    currentTask: "",
+    resourcesRequired: "",
+},
+];
 //if this is true, agents add nodes to the graph as well as update implementation data. Its slower.
 const addNodes = false;
 
@@ -96,8 +132,7 @@ export default function AgentsPage() {
         engaging to the audience. Narrate the documenary as lines of dialogue by a narrator and other characters. Place each item of dialogue on a new line. 
         Each line should be in the format "Speaker: Dialogue". Do not include any other text or explanation.`}
           imagePrompt={`You are an expert photographer describing images to the blind. You describe a scene provided by the user in vivid detail. 
-          Describe the scene as if you were painting a picture with words. Start your description with: "A photograph of" then use keywords and simple phrases separated by commas.
-          End your description with: Canon EOS 5D Mark IV, 24mm, f/8, 1/250s, ISO 100, 2019`}
+          Describe the scene as if you were painting a picture with words.`}
         />
         <div id="Agent UI" className="flex flex-col p-8 z-50">
           <button
