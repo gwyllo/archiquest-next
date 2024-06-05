@@ -10,7 +10,8 @@ import GraphCanvas, {
 import { useEffect, useState } from "react";
 import crypto from "crypto";
 import KeyValueTable from "@/components/KeyValueTable";
-
+import { jsonText } from "@/ai/prompts";
+import { unstable_noStore as noStore } from "next/cache";
 type EditNode = {
   x: number;
   y: number;
@@ -22,11 +23,12 @@ type EditNode = {
 //The onChange event is fired whenever the graph changes for integration with other components
 export default function KnowledgeGraph({
   graph = { nodes: [], edges: [] },
-  onUpdate,
+  onUpdate = (graph: Graph) => {},
 }: {
   graph?: Graph;
-  onUpdate: (graph: Graph) => void;
+  onUpdate?: (graph: Graph) => void;
 }) {
+  noStore();
   const [nodes, setNodes] = useState<GNode[]>(graph.nodes);
   const [edges, setEdges] = useState<Edge[]>(graph.edges);
   const [concept, setConcept] = useState<string>(
@@ -40,6 +42,7 @@ export default function KnowledgeGraph({
 
   //listen for changes to the props
   useEffect(() => {
+    if (!graph || !graph.nodes || graph.nodes.length == 0) return;
     setNodes(graph.nodes);
     setEdges(graph.edges);
   }, [graph]);
@@ -68,9 +71,9 @@ export default function KnowledgeGraph({
   const handleCreate = async (prompt: string) => {
     setGenerating(true);
     try {
-      const graph = await getGroqCompletion(
+      const graph = await getGeminiVision(
         prompt,
-        1024,
+        undefined,
         `
         The user will provide you with a concept to be graphed. 
         Generate an array of Nodes and an array of Edges to represent the knowledge graph.
@@ -150,7 +153,7 @@ export default function KnowledgeGraph({
       console.log(graphJSON);
       const newNodes = nodes.map((n) => ({
         ...n,
-        implementation: graphJSON[n.id] ?? "",
+        ...{ implementation: graphJSON[n.id] ?? "" },
       }));
       setNodes(newNodes);
       onUpdate({ nodes: newNodes, edges });

@@ -49,8 +49,6 @@ const initAgents = [
     resourcesRequired: "",
 },
 ];
-//if this is true, agents add nodes to the graph as well as update implementation data. Its slower.
-const addNodes = false;
 
 //Demo of running multiple agents that all compete for resources
 export default function AgentsPage() {
@@ -63,53 +61,36 @@ export default function AgentsPage() {
     setGenerating(true);
     //now we have the new agents, we can implement our logic for how to update the graph.
     try {
-      const requestString = JSON.stringify({ graph, newAgents });
+      const requestString = `${JSON.stringify({ graph, newAgents })}`;
       console.log(requestString);
       //just refine implementation
       const newStates = await getGroqCompletion(
         requestString,
-        256,
+        1024,
         `The user will provide you with an implementation of a specific concept in the form of a knowledge graph together with an array of agents working towards specific goals within this graph.
           Your task is to update the knowledge graph to reflect the changes made by the agents.
-          For any nodes affected by the agents, generate a new state object for the node using the node ID as the key and the new state as the value.
-          Return your response in JSON in the format {[id:string]: string}.`,
-        true
+          Generate an array of new Nodes and an array of new Edges to represent any concepts not already modelled by the knowledge graph.
+          Update any existing nodes affected by the agents using a state map. Generate a new state object for each affected node using the node ID as the key and the new state as the value.
+          Return your response in JSON in the format {newNodes:Node[], newEdges:Edge[], newStates:{[id:string]: string}}.Only return a single valid JSON object with no other text or explanation.`,
+        true,
+        "llama3-8b-8192"
       );
       const graphJSON = JSON.parse(newStates);
       console.log(graphJSON);
       //iterate over state updates
       const updatedNodes = [...graph.nodes];
-      for (const [id, state] of Object.entries(graphJSON)) {
+      for (const [id, state] of Object.entries(graphJSON.newStates)) {
         const node: any = updatedNodes.find((n) => n.id === id);
         if (node) node.state = state;
       }
+      const edges = [...graph.edges, ...graphJSON.newEdges];
+      const relaxed = relaxGraph(
+        [...updatedNodes, ...graphJSON.newNodes],
+        edges
+      );
+      const newGraph = { nodes: relaxed, edges: edges };
 
-      console.log("updated nodes");
-
-      if (addNodes) {
-        const appendGraph = await getGroqCompletion(
-          requestString,
-          512,
-          `The user will provide you with an implementation of a specific concept in the form of a knowledge graph together with an array of agents working towards specific goals within this graph.
-         Your task is to generate new nodes to describe any agent tasks not currently modelled by the knowledge graph. 
-         Generate intermediate nodes if new concepts seem unrelated to the existing graph. Do not repeat concepts already modelled in the graph. 
-          Return your response in JSON in the format {newNodes: Node[], newEdges: Edge[]}.`,
-          true
-        );
-
-        console.log("appended graph");
-        const nodeJSON = JSON.parse(appendGraph);
-        console.log(nodeJSON);
-        //iterate over state updates
-        const edges = [...graph.edges, ...nodeJSON.newEdges];
-        const relaxed = relaxGraph(
-          [...updatedNodes, ...nodeJSON.newNodes],
-          edges
-        );
-        setGraph({ nodes: relaxed, edges: edges });
-      } else {
-        setGraph({ nodes: updatedNodes, edges: graph.edges });
-      }
+      setGraph(newGraph);
     } catch (e) {
       console.error(e);
       alert("failed to update graph");

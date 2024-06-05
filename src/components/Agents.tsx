@@ -9,6 +9,7 @@ export default function Agents({
   maxTokens = 1024,
   onUpdate,
   goal,
+  time,
 }: {
   world: any;
   initAgents: any[];
@@ -58,10 +59,10 @@ export default function Agents({
     try {
       const newAgents = await getGroqCompletion(
         //run all agents in parallel
-        JSON.stringify({ world, agents }),
+        JSON.stringify({ world, agents, currentYear: time }),
         1024,
         `You simulate autonomous agent behaviour within a world state represented by a knowledge graph. 
-        The goal and other properties of the agent will be provided by the user. 
+        The current year, goal and other properties of the agent will be provided by the user. 
         If the current task of the agent has been completed, determine the result of the task as specifically as possible based on the knowledge graph. 
         Generate a task for each agent to help them achieve their goal, and describe actions they perform and resources they consume to achieve it.
         Return a new JSON object with the updated agents in the format {agents: Agent[]}.`,
@@ -81,6 +82,12 @@ export default function Agents({
 
   return (
     <div className="flex flex-col w-full rounded-lg border border-black/25 p-4 ">
+      <button
+        className="p-2 bg-white rounded-lg my-4 border border-black/25 w-full hover:shadow"
+        onClick={() => generateAgents(world, goal ?? "")}
+      >
+        {generating ? "Generating..." : "Create New Agents"}
+      </button>
       <button
         className="p-2 bg-white rounded-lg my-4 border border-black/25 w-full hover:shadow"
         onClick={() => runAgents()}
