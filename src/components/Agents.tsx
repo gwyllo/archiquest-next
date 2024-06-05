@@ -15,6 +15,7 @@ export default function Agents({
   maxTokens?: number;
   onUpdate: (agents: string[]) => void;
   goal?: string;
+  time?: string;
 }) {
   const [generating, setGenerating] = useState<boolean>(false);
   const [agents, setAgents] = useState<any[]>(initAgents);
