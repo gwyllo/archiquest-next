@@ -37,7 +37,7 @@ export default function Animation({
       //improve image description
       const imageDescription = await generateDescription();
       const url = await generateImageFal(
-        `${imageDescription}. in the setting of central america tropics hyperealistic.`,
+        `${imageDescription}. unreal engine, hyperealistic.`,
         { width: width, height: height },
         "hyper-sdxl"
       );
