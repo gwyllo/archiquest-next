@@ -11,7 +11,7 @@ import { unstable_noStore as noStore } from "next/cache";
 
 //This is new - just provide a high level goal and groq will figure out how to make agents
 const agentGoal =
-  "Build an offshore aquaculture farm to supply the worlds protein demands by 2050";
+  "Build an airship cargo ferrying system to transport cargo over panama as an alternate to the panama canal use by 2050";
 //set your agents here. If you leave this empty then Groq creates some for you based on your graph and the goal above.
 const initAgents: any = [];
 //if this is true, agents add nodes to the graph as well as update implementation data. Its slower.
