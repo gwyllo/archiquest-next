@@ -108,9 +108,8 @@ export default function AgentsPage() {
         <Narration
           play={playNarration}
           textToNarrate={JSON.stringify(graph)}
-          captionPrompt={`You are provided with a world state and an array of agents performing tasks to make changes to this world state. 
-        Write a short script that narrates a documentary film that dramatizes these events and embellishes them where necessary to make them 
-        engaging to the audience. Narrate the documenary as lines of dialogue by a narrator and other characters. Place each item of dialogue on a new line. 
+          captionPrompt={`You are provided with a world state, 
+        Write dialogue that reflects on the world in past tense as if you are an the ceo of the airship company who took a risk in doing this project is looking back on the project as it changed the world of travel, you are recounting your experience and how your life has changed. also recount how the project started and how it adapted to have greater uses. output text that is spelt in a way that if read would sound like a south american accent is reading it. Place each item of dialogue on a new line.
         Each line should be in the format "Speaker: Dialogue". Do not include any other text or explanation.`}
           imagePrompt={`You are an expert photographer describing images to the blind. You describe a scene provided by the user in vivid detail. 
           Describe the scene as if you were painting a picture with words.`}
