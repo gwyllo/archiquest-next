@@ -17,6 +17,8 @@ type EditNode = {
   node?: GNode;
   context: GNode[];
 };
+import TextToSpeech from "./TextToSpeech";
+
 
 //Generates a knowledge graph of a given concept and allows for quering it
 //The onChange event is fired whenever the graph changes for integration with other components
@@ -366,6 +368,12 @@ export default function KnowledgeGraph({
           <KeyValueTable data={selectedNode} />
         </div>
       )}
+      <TextToSpeech
+      text={answer.answer}
+      showControls={false}
+      autoPlay
+      model={ "aura-helios-en"}
+      />
       <GraphCanvas
         nodes={nodes}
         edges={edges}
