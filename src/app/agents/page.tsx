@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 //This is new - just provide a high level goal and groq will figure out how to make agents
 const agentGoal =
-  "Build an airship cargo ferrying system to have a stake in global transport by 2050";
+  "Build an airship cargo ferrying system to replace transport through the panama canal in an effort to reguvinate the Lake Gutan from drought";
 //set your agents here. If you leave this empty then Groq creates some for you based on your graph and the goal above.
 const initAgents = [
   {
@@ -124,7 +124,7 @@ export default function AgentsPage() {
           <div
             className={`${
               showUI ? "flex" : "hidden"
-            }  flex-col w-full bg-white p-4 rounded-lg gap-4`}
+            }  flex-col w-full bg-white bg-opacity-10 p-4 rounded-lg gap-4`}
           >
             <button
               className="p-2 rounded-lg border bg-white shadow"

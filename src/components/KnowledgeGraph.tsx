@@ -35,7 +35,7 @@ export default function KnowledgeGraph({
   const [nodes, setNodes] = useState<GNode[]>(graph.nodes);
   const [edges, setEdges] = useState<Edge[]>(graph.edges);
   const [concept, setConcept] = useState<string>(
-    "Design and engineering considerations for an offshore salmon farm"
+    "Build an airship cargo ferrying system to replace transport through the panama canal in an effort to reguvinate the Lake Gutan from drought"
   );
   const [generating, setGenerating] = useState<boolean>(false);
   const [selectedNode, setSelectedNode] = useState<GNode | null>(null);
@@ -65,6 +65,13 @@ export default function KnowledgeGraph({
         true
       );
       const graphJSON = JSON.parse(response);
+      onSelect({
+        id: "",
+        name: "Answer",
+        x: 0,
+        y: 0,
+        properties: { image: graphJSON.answer },
+      });
       setAnswer(graphJSON);
     } catch (e) {
       console.error(e);
@@ -316,10 +323,10 @@ export default function KnowledgeGraph({
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full gap-4 bg-white rounded-lg p-4 border border-black/25">
+    <div className="flex flex-col justify-center items-center w-full h-full gap-4 bg-white bg-opacity-10 rounded-lg p-4 border border-black/25">
       <div className="flex justify-between w-full gap-4 flex-wrap">
         <input
-          className="p-2 bg-white rounded-lg border border-black/25 w-full"
+          className="p-2 bg-white bg-opacity-10 rounded-lg border border-black/25 w-full"
           value={concept}
           onChange={(e) => setConcept(e.target.value)}
         />
@@ -392,12 +399,12 @@ export default function KnowledgeGraph({
       )}
       <div className="flex justify-between w-full mb-4 gap-4">
         <input
-          className="p-2 bg-white rounded-lg  border border-black/25 w-full"
+          className="p-2 bg-white bg-opacity-10 rounded-lg  border border-black/25 w-full"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
         />
         <button
-          className="p-2 bg-white rounded-lg  border border-black/25 hover:shadow"
+          className="p-2 bg-white bg-opacity-10 rounded-lg  border border-black/25 hover:shadow"
           onClick={handleAsk}
         >
           Ask
@@ -405,7 +412,7 @@ export default function KnowledgeGraph({
       </div>
       <KeyValueTable data={answer} />
       <button
-        className="p-2 bg-white rounded-lg  border border-black/25 hover:shadow"
+        className="p-2 bg-white bg-opacity-10 rounded-lg  border border-black/25 hover:shadow"
         onClick={integrateAnswer}
       >
         Integrate Answer
