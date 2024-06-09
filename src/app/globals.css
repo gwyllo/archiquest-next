@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
 }
 
 body {
-  background: rgb(99, 125, 149);
+  background-image: url('/assets/bigpanama.png');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
 }
 
 @layer utilities {
