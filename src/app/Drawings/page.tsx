@@ -7,7 +7,8 @@ const images = [
     { src: '/conceptDALL·E 2024-06-10 01.39.36 - A series of drawings in a flat, minimalist, and retro-futuristic style of an airship labeled Flying Whales lifting cargo containers over a city. The.webp', alt: 'Image 4' },
     { src: '/conceptDALL·E 2024-06-10 02.01.12 - A series of drawings in a flat, minimalist, and retro-futuristic style of an airship labeled Flying Whales lifting cargo containers over a container.webp', alt: 'Image 4' },
     { src: '/conceptsections world engine.png', alt: 'Image 2' },
-    { src: '/conceptC0178040-Panama_Canal_cross-section,_artwork.png', alt: 'Image 1' },
+    { src: '/stage2.51.png', alt: 'Image 1' },
+    { src: '/stage2.52.png', alt: 'Image 1' },
     { src: '/1-2024.png', alt: 'Image 3' },
     { src: '/2-2024.png', alt: 'Image 4' },
     { src: '/1-2030.png', alt: 'Image 2' },
@@ -19,7 +20,7 @@ const images = [
 
 export default function Gallery() {
     return (
-      <main className="flex flex-col items-center justify-between p-24 bg-cover bg-center" style={{ backgroundImage: "url('/clouds.jpeg')" }}>
+      <main className="flex flex-col items-center justify-between p-24 bg-cover bg-center bg-white">
         <h1 className="text-4xl font-bold mb-8">Image Gallery</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
           {images.map((image, index) => (
