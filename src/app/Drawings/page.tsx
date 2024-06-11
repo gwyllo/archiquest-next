@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 const images = [
-    { src: '/Image_481.jpg', alt: 'Image 2' },
-    { src: '/early time/Passenger-cruise-ship-Panama-Canal.webp', alt: 'Image 1' },
-    { src: '/2.png', alt: 'Image 3' },
-    { src: '/1.png', alt: 'Image 4' },
+    { src: '/earlytimeImage_481.jpg', alt: 'Image 2' },
+    { src: '/earlytimePassenger-cruise-ship-Panama-Canal.webp', alt: 'Image 1' },
+    { src: '/concept3.png', alt: 'Image 3' },
+    { src: '/conceptDALL·E 2024-06-10 01.39.36 - A series of drawings in a flat, minimalist, and retro-futuristic style of an airship labeled Flying Whales lifting cargo containers over a city. The.webp', alt: 'Image 4' },
     { src: '/Image (3).png', alt: 'Image 2' },
     { src: '/Imagesunsetpretty.png', alt: 'Image 1' },
     { src: '/image copy.png', alt: 'Image 3' },
