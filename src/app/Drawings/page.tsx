@@ -37,6 +37,8 @@ const images = [
     { src: '/finalstageScreenshot 2024-06-11 181807.png', alt: 'Image 4' },
     { src: '/finalstageScreenshot 2024-06-11 182001.png', alt: 'Image 4' },
     { src: '/finalstageScreenshot 2024-06-11 182308.png', alt: 'Image 4' },
+    { src: '/1-2125.png', alt: 'Image 4' },
+    { src: '/2-2125.png', alt: 'Image 4' },
  
 
 
