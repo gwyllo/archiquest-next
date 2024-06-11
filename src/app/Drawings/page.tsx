@@ -15,7 +15,7 @@ const images = [
     { src: '/2-2030.png', alt: 'Image 1' },
     { src: '/stage2.5mage (3).png', alt: 'Image 3' },
     { src: '/bigpanama.png', alt: 'Image 3' },
-    { src: '/imagesunsetpretty.png', alt: 'Image 3' },
+    { src: '/Imagesunsetpretty.png', alt: 'Image 3' },
     { src: '/3ec48cf2-0965-46f9-86e7-347b7811bf59.jpeg', alt: 'Image 4' },
     { src: '/9e19861f-d5b9-46a8-a178-9c3fb8e2fda5.jpeg', alt: 'Image 4' },
     { src: '/92f556c3-f5ff-4150-8ea5-b71c210062fd.jpeg', alt: 'Image 4' },
@@ -29,15 +29,16 @@ const images = [
     { src: '/finalstageimg_8_1372259253_6b7dc8dbbe9b41ba754f9869cdf980d7.jpg', alt: 'Image 4' },
     { src: '/finalstageimg_9_1372259253_db8898a8fabee0735b3c6c8ee29e2b01.jpg', alt: 'Image 4' },
     { src: '/finalstageimg_10_1372259253_dd3a700c935fb03565b6329313194bec.jpg', alt: 'Image 4' },
+    { src: '/1-2075.jpg', alt: 'Image 4' },
+    { src: '/2-2075.jpg', alt: 'Image 4' },
+    { src: '/1-2100.jpg', alt: 'Image 4' },
+    { src: '/2-2100.jpg', alt: 'Image 4' },
     { src: '/finalstageScreenshot 2024-06-11 180142.png', alt: 'Image 4' },
     { src: '/finalstageScreenshot 2024-06-11 181807.png', alt: 'Image 4' },
     { src: '/finalstageScreenshot 2024-06-11 182001.png', alt: 'Image 4' },
     { src: '/finalstageScreenshot 2024-06-11 182308.png', alt: 'Image 4' },
-    { src: '/finalstageimg_9_1372259253_db8898a8fabee0735b3c6c8ee29e2b01.jpg', alt: 'Image 4' },
-    { src: '/finalstageimg_9_1372259253_db8898a8fabee0735b3c6c8ee29e2b01.jpg', alt: 'Image 4' },
-    { src: '/finalstageimg_9_1372259253_db8898a8fabee0735b3c6c8ee29e2b01.jpg', alt: 'Image 4' },
-    { src: '/finalstageimg_9_1372259253_db8898a8fabee0735b3c6c8ee29e2b01.jpg', alt: 'Image 4' },
-    { src: '/2-2050.png', alt: 'Image 4' },
+ 
+
 
     // Add more images as needed
 ];
