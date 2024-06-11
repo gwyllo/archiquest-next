@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const images = [
     { src: '/Image_481.jpg', alt: 'Image 2' },
-    { src: '/Passenger-cruise-ship-Panama-Canal.webp', alt: 'Image 1' },
+    { src: '/early time/Passenger-cruise-ship-Panama-Canal.webp', alt: 'Image 1' },
     { src: '/2.png', alt: 'Image 3' },
     { src: '/1.png', alt: 'Image 4' },
     { src: '/Image (3).png', alt: 'Image 2' },
