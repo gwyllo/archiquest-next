@@ -38,7 +38,7 @@ const images = [
 
 export default function Gallery() {
     return (
-      <main className="flex flex-col items-center justify-between p-24 bg-cover bg-center bg-light-grey">
+      <main className="flex flex-col items-center justify-between p-24 bg-cover bg-center bg-white">
         <h1 className="text-4xl font-bold mb-8">Image Gallery</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
           {images.map((image, index) => (
