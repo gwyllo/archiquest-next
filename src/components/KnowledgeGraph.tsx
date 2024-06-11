@@ -35,7 +35,7 @@ export default function KnowledgeGraph({
   const [nodes, setNodes] = useState<GNode[]>(graph.nodes);
   const [edges, setEdges] = useState<Edge[]>(graph.edges);
   const [concept, setConcept] = useState<string>(
-    "Build an airship cargo ferrying system to replace transport through the panama canal in an effort to reguvinate the Lake Gutan from drought"
+    "Build an airship cargo ferrying system to replace transport through the panama canal in an effort to rejuvenate the Lake Gutan from drought. we are using flying whales as our basis specification for airships which are developing airships that can carry 500 tonnes at a top speed of 90km/h. after calculations we found only 93 airships are necessary to keep up with demands."
   );
   const [generating, setGenerating] = useState<boolean>(false);
   const [selectedNode, setSelectedNode] = useState<GNode | null>(null);
