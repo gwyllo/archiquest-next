@@ -30,7 +30,7 @@ export default function Home() {
           <button className="bg-gray-200 p-4 rounded-full shadow-md hover:bg-gray-300 w-40 h-16">Recording</button>
         </Link>
         <Link href="/Drawings">
-          <button className="bg-gray-200 p-4 rounded-full shadow-md hover:bg-gray-300 w-40 h-16">Drawings</button>
+          <button className="bg-gray-200 p-4 rounded-full shadow-md hover:bg-gray-300 w-40 h-16">Gallery</button>
         </Link>
         <Link href="/agents/timeline">
           <button className="bg-gray-200 p-4 rounded-full shadow-md hover:bg-gray-300 w-40 h-16">World Engine</button>
