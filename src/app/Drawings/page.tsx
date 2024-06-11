@@ -5,7 +5,7 @@ const images = [
     { src: '/earlytimePassenger-cruise-ship-Panama-Canal.webp', alt: 'Image 1' },
     { src: '/concept3.png', alt: 'Image 3' },
     { src: '/conceptDALL·E 2024-06-10 01.39.36 - A series of drawings in a flat, minimalist, and retro-futuristic style of an airship labeled Flying Whales lifting cargo containers over a city. The.webp', alt: 'Image 4' },
-    { src: '/conceptDALL·E 2024-06-10 02.01.12 - A series of drawings in a flat, minimalist, and retro-futuristic style of an airship labeled Flying Whales lifting cargo containers over a city. The.webp', alt: 'Image 4' },
+    { src: '/conceptDALL·E 2024-06-10 02.01.12 - A series of drawings in a flat, minimalist, and retro-futuristic style of an airship labeled Flying Whales lifting cargo containers over a container.webp', alt: 'Image 4' },
     { src: '/conceptsections world engine.png', alt: 'Image 2' },
     { src: '/conceptC0178040-Panama_Canal_cross-section,_artwork.png', alt: 'Image 1' },
     { src: '/1-2024.png', alt: 'Image 3' },
