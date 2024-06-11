@@ -17,10 +17,7 @@ export default function Home() {
           </p>
           <ol className="list-decimal list-inside mt-4">
             <li>
-              Water Conservation Measures: These include the use of water-saving basins in the Neopanamax Locks and cross-filling techniques in the Panamax Locks to optimize water usage and reduce waste (Home).
-            </li>
-            <li>
-              Freshwater Surcharge: A freshwater surcharge was introduced in 2020, involving a fixed fee and a variable fee based on the Gatun Lake water levels. This is aimed at managing water demand and usage more effectively (Clyde & Co).
+            Another idea we have thought to develop is the idea of an airship ferrying system, where the boats have their cargo ferried over the land to the other side of panama and reloaded into boats on the other side. this requires heavy research to see if its a viable opition. first we looked at how many airships would be necessary in order to keep up with the boats that use the canal now. through ai we can see that:
             </li>
           </ol>
         </div>
