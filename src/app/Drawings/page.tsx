@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
 const images = [
-    { src: '/Image.png', alt: 'Image 2' },
-    { src: '/Imagesunsetpretty.png', alt: 'Image 1' },
-    { src: '/image copy.png', alt: 'Image 3' },
-    { src: '/bigpanama.png', alt: 'Image 4' },
-    { src: '/Image.png', alt: 'Image 2' },
+    { src: '/Image_481.jpg', alt: 'Image 2' },
+    { src: '/Passenger-cruise-ship-Panama-Canal.webp', alt: 'Image 1' },
+    { src: '/2.png', alt: 'Image 3' },
+    { src: '/1.png', alt: 'Image 4' },
+    { src: '/Image (3).png', alt: 'Image 2' },
     { src: '/Imagesunsetpretty.png', alt: 'Image 1' },
     { src: '/image copy.png', alt: 'Image 3' },
     { src: '/bigpanama.png', alt: 'Image 4' },
