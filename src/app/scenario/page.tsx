@@ -24,7 +24,7 @@ export default function Gallery() {
         <div className="grid grid-cols-1 gap-4 w-full">
           {images.map((image, index) => (
             <div key={index} className="relative w-full h-auto">
-              <Image src={image.src} alt={image.alt} layout="responsive" width={1600} height={900} objectFit="cover" className="rounded-lg shadow-md"/>
+              <Image src={image.src} alt={image.alt} layout="responsive" width={1200} height={675} objectFit="cover" className="rounded-lg shadow-md"/>
             </div>
           ))}
         </div>
