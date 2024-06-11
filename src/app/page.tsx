@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col justify-between p-24" style={{ 
-      backgroundImage: "url('/Screenshot 2024-06-11 182308.png')",
+      backgroundImage: "url('/finalstageScreenshot 2024-06-11 182308.png')",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundPosition: "center"
