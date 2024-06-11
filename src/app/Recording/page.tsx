@@ -8,7 +8,7 @@ export default function Gallery() {
         <div className="rounded-lg shadow-md w-full overflow-hidden" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://youtu.be/ZjBgEkbnX2I?si=GusdBS9Nais9LcfN"
+            src="https://www.youtube.com/embed/ZjBgEkbnX2I"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
