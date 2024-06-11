@@ -1,18 +1,19 @@
 import Image from 'next/image';
 
 const images = [
-    { src: '/Image.png', alt: 'Image 2' },
-    { src: '/Imagesunsetpretty.png', alt: 'Image 1' },
-    { src: '/image copy.png', alt: 'Image 3' },
-    { src: '/bigpanama.png', alt: 'Image 4' },
-    { src: '/Image.png', alt: 'Image 2' },
-    { src: '/Imagesunsetpretty.png', alt: 'Image 1' },
-    { src: '/image copy.png', alt: 'Image 3' },
-    { src: '/bigpanama.png', alt: 'Image 4' },
-    { src: '/Image.png', alt: 'Image 2' },
-    { src: '/Imagesunsetpretty.png', alt: 'Image 1' },
-    { src: '/image copy.png', alt: 'Image 3' },
-    { src: '/bigpanama.png', alt: 'Image 4' },
+    { src: '/scenarioslide1.jpg', alt: 'Image 1' },
+    { src: '/scenarioslide2.jpg', alt: 'Image 2' },
+    { src: '/scenarioslide3.jpg', alt: 'Image 3' },
+    { src: '/scenarioslide4.jpg', alt: 'Image 4' },
+    { src: '/scenarioslide5.jpg', alt: 'Image 5' },
+    { src: '/scenarioslide6.jpg', alt: 'Image 6' }, 
+    { src: '/scenarioslide7.jpg', alt: 'Image 7' },
+    { src: '/scenarioslide8.jpg', alt: 'Image 8' },
+    { src: '/scenarioslide9.jpg', alt: 'Image 9' },
+    { src: '/scenarioslide10.jpg', alt: 'Image 10' },
+    { src: '/scenarioslide11.jpg', alt: 'Image 11' },
+    { src: '/scenarioslide12.jpg', alt: 'Image 12' },
+    { src: '/scenarioslide13.jpg', alt: 'Image 13' },
     // Add more images as needed
 ];
 
