@@ -12,12 +12,11 @@ export default function Home() {
         <div className="bg-white p-8 bg-opacity-60 rounded-lg shadow-lg max-w-lg mr-24">
           <h1 className="text-4xl font-bold">Panama Canal Airship Ferrying System</h1>
           <p className="mt-4">
-            To address the challenges posed by drought and low water levels,
-            the Panama Canal Authority has implemented several strategies:
+          Lake Gutan is experiencing severe impacts from climate change and is drying up, which is creating significant strain on the global transport industry, as it handles nearly one million tons of cargo daily. This environmental crisis disrupts transportation and impacts local communities dependent on the lake. To address this, we must find a solution to revitalize Lake Gutan while maintaining its critical role in global logistics. One potential answer is the use of airships, which can transport large volumes of goods efficiently and with minimal environmental impact. 
           </p>
           <ol className="list-decimal list-inside mt-4">
             <li>
-            Another idea we have thought to develop is the idea of an airship ferrying system, where the boats have their cargo ferried over the land to the other side of panama and reloaded into boats on the other side. this requires heavy research to see if its a viable opition. first we looked at how many airships would be necessary in order to keep up with the boats that use the canal now. through ai we can see that:
+            Could airships be the innovative solution to preserving Lake Gutan and sustaining global trade?
             </li>
           </ol>
         </div>
