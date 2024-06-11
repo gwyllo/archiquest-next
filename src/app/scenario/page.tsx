@@ -20,7 +20,7 @@ const images = [
 export default function Gallery() {
     return (
       <main className="flex flex-col items-center justify-between p-24 bg-cover bg-center bg-white">
-        <h1 className="text-4xl font-bold mb-8">Lake Gutan Drought Issue</h1>
+        <h1 className="text-4xl font-bold mb-8"></h1>
         <div className="grid grid-cols-1 gap-4 w-full">
           {images.map((image, index) => (
             <div key={index} className="relative w-full h-auto">
