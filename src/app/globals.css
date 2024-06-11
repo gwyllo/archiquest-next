@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
 }
 
 body {
-  background-image: url('/public/Imagesunsetpretty.png');
+  background-image: url('/clouds.jpeg'); /* Ensure this path is correct */
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image */
