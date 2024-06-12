@@ -43,6 +43,8 @@ const images = [
     { src: '/finalstageScreenshot 2024-06-11 182308.png', alt: 'Image 4' },
     { src: '/1-2125.png', alt: 'Image 4' },
     { src: '/2-2125.png', alt: 'Image 4' },
+    { src: '/finalsection.png', alt: 'Image 4' },
+    { src: '/finalroute.png', alt: 'Image 4' },
  
 
 
