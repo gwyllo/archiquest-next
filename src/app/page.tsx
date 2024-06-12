@@ -14,7 +14,7 @@ export default function Home() {
           <p className="mt-4">
           Lake Gutan is experiencing severe impacts from climate change and is drying up, which is creating significant strain on the global transport industry, as it handles nearly one million tons of cargo daily. This environmental crisis disrupts transportation and impacts local communities dependent on the lake. To address this, we must find a solution to revitalize Lake Gutan while maintaining its critical role in global logistics. One potential answer is the use of airships, which can transport large volumes of goods efficiently and with minimal environmental impact. 
           </p>
-          <ol className="bold mt-4">
+          <ol className="font-bold mt-4">
             <li>
             Could airships be the innovative solution to preserving Lake Gutan and sustaining global trade?
             </li>
